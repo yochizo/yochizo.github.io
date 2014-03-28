@@ -1,26 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2014-03-28T01:03:50+09:00</updated>
-  <id>http://yoursite.com/</id>
+  <title><![CDATA[yochizo tech blog!?]]></title>
+  <link href="http://yochizo.github.io/atom.xml" rel="self"/>
+  <link href="http://yochizo.github.io/"/>
+  <updated>2014-03-28T14:35:06+09:00</updated>
+  <id>http://yochizo.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Yochizo]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[投稿テスト]]></title>
-    <link href="http://yoursite.com/blog/2014/03/28/test-post/"/>
+    <title type="html"><![CDATA[octopress記事の投稿手順]]></title>
+    <link href="http://yochizo.github.io/blog/2014/03/28/test-post/"/>
     <updated>2014-03-28T01:01:12+09:00</updated>
-    <id>http://yoursite.com/blog/2014/03/28/test-post</id>
-    <content type="html"><![CDATA[<h1>octopressテスト投稿</h1>
+    <id>http://yochizo.github.io/blog/2014/03/28/test-post</id>
+    <content type="html"><![CDATA[<p>octopressの記事投稿手順を簡単にまとめておく</p>
 
-<p>投稿テストです</p>
+<h2>あたらしく投稿する</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec rake new_post["&lt;title&gt;"]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>octopress/source/_post ディレクトリ配下に &ldquo;YYYY-MM-DD-&lt;title>.markdown&rdquo; というファイルができるので、これを適当なテキストエディタで編集する。</p>
+
+<h2>プレビューで記事を確認</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ブラウザで <a href="http://localhost:4000/">http://localhost:4000/</a> にアクセスし、記事の内容を確認します。</p>
+
+<h2>記事を公開する</h2>
+
+<p>Github Pagesに記事をデプロイします。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec rake generate
+</span><span class='line'>bundle exec rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+
 ]]></content>
   </entry>
   
